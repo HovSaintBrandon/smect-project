@@ -126,8 +126,9 @@ a {
 /* Navigation */
 .navigation {
     position: fixed;
-    top: 0;
+    top: -30px;
     left: 0;
+    height: 120px;
     right: 0;
     z-index: 1000;
     background: hsla(220, 15%, 8%, 0.8);
@@ -139,7 +140,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1.5rem;
+    padding: -0.5rem;
 }
 
 .nav-brand {
@@ -750,4 +751,39 @@ a {
 .hover-glow:hover .why-icon {
     transform: scale(1.15);
     box-shadow: 0 0 30px hsla(265, 80%, 75%, 0.4);
+}
+/* Replace text brand with logo */
+.nav-brand { display: none; } /* hides the old "SMECT" text */
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    height: 60%;
+}
+
+.nav-logo-img {
+    height: 150px;          /* Adjust this value if needed */
+    width: auto;
+    transition: all 0.4s ease;
+}
+
+/* Optional: subtle hover effect + slight glow on scroll */
+.nav-logo-img:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1) drop-shadow(0 0 10px hsla(265, 60%, 65%, 0.3));
+}
+
+/* Smaller logo on mobile */
+@media (max-width: 768px) {
+    .nav-logo-img {
+        height: 40px;
+    }
+}
+
+
+.client-card .client-logo {
+    width: 50px;                /* or whatever size you want */
+    height: 50px;               /* fixed height prevents blow-up */
+    object-fit: contain;        /* keeps SVG proportions */
+    flex-shrink: 0;             /* prevents shrinking */
 }
