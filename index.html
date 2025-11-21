@@ -15,6 +15,7 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     
     <link rel="stylesheet" href="styles.css">
+    
 </head>
 <body>
     <!-- Navigation -->
@@ -22,10 +23,8 @@
         <div class="container nav-container">
             <div class="nav-brand">SMECT</div>
             
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
-                <span></span>
-                <span></span>
-                <span></span>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
             </button>
             
             <div class="nav-links" id="navLinks">
@@ -92,7 +91,7 @@
                 </div>
 
                 <div class="about-cards">
-                    <div class="info-card">
+                    <div class="info-card hover-glow">
                         <div class="info-badge">Our Vision</div>
                         <p class="info-text">
                             To be a world class consulting firm recognized both locally and internationally 
@@ -101,7 +100,7 @@
                         </p>
                     </div>
 
-                    <div class="info-card">
+                    <div class="info-card hover-glow">
                         <div class="info-badge">Our Mission</div>
                         <p class="info-text">
                             To offer practical, effective and competitive solutions to business entities, 
@@ -113,7 +112,7 @@
                 </div>
             </div>
 
-            <div class="approach-card">
+            <div class="approach-card hover-glow">
                 <h3 class="approach-title">Our Approach</h3>
                 <p class="approach-text">
                     We offer ourselves upon understanding the client's needs and aspirations, 
@@ -136,64 +135,35 @@
             </div>
 
             <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i data-lucide="building-2"></i>
-                    </div>
+                <div class="service-card hover-glow">
+                    <div class="service-icon"><i data-lucide="building-2"></i></div>
                     <h3 class="service-title">Programme Design & Development</h3>
-                    <p class="service-description">
-                        Strategic programme planning and development tailored to organizational objectives and stakeholder needs
-                    </p>
+                    <p class="service-description">Strategic programme planning and development tailored to organizational objectives and stakeholder needs</p>
                 </div>
-
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i data-lucide="target"></i>
-                    </div>
+                <div class="service-card hover-glow">
+                    <div class="service-icon"><i data-lucide="target"></i></div>
                     <h3 class="service-title">Project Planning & Management</h3>
-                    <p class="service-description">
-                        Comprehensive project lifecycle management ensuring timely delivery and optimal resource utilization
-                    </p>
+                    <p class="service-description">Comprehensive project lifecycle management ensuring timely delivery and optimal resource utilization</p>
                 </div>
-
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i data-lucide="users"></i>
-                    </div>
+                <div class="service-card hover-glow">
+                    <div class="service-icon"><i data-lucide="users"></i></div>
                     <h3 class="service-title">Organizational Capacity Assessment</h3>
-                    <p class="service-description">
-                        In-depth institutional capacity evaluation and training programmes for sustainable organizational growth
-                    </p>
+                    <p class="service-description">In-depth institutional capacity evaluation and training programmes for sustainable organizational growth</p>
                 </div>
-
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i data-lucide="file-check"></i>
-                    </div>
+                <div class="service-card hover-glow">
+                    <div class="service-icon"><i data-lucide="file-check"></i></div>
                     <h3 class="service-title">Gender Audit & Social Research</h3>
-                    <p class="service-description">
-                        Expert gender mainstreaming audits and social research methodologies for inclusive development
-                    </p>
+                    <p class="service-description">Expert gender mainstreaming audits and social research methodologies for inclusive development</p>
                 </div>
-
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i data-lucide="bar-chart-3"></i>
-                    </div>
+                <div class="service-card hover-glow">
+                    <div class="service-icon"><i data-lucide="bar-chart-3"></i></div>
                     <h3 class="service-title">Monitoring & Evaluation</h3>
-                    <p class="service-description">
-                        Rigorous M&E frameworks and impact assessment for evidence-based decision making
-                    </p>
+                    <p class="service-description">Rigorous M&E frameworks and impact assessment for evidence-based decision making</p>
                 </div>
-
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i data-lucide="trending-up"></i>
-                    </div>
+                <div class="service-card hover-glow">
+                    <div class="service-icon"><i data-lucide="trending-up"></i></div>
                     <h3 class="service-title">Advocacy & Public Information</h3>
-                    <p class="service-description">
-                        Strategic public information campaigns and advocacy initiatives for maximum stakeholder engagement
-                    </p>
+                    <p class="service-description">Strategic public information campaigns and advocacy initiatives for maximum stakeholder engagement</p>
                 </div>
             </div>
         </div>
@@ -211,70 +181,41 @@
             </div>
 
             <div class="why-grid">
-                <div class="why-card">
-                    <div class="why-icon">
-                        <i data-lucide="dollar-sign"></i>
-                    </div>
+                <div class="why-card hover-glow">
+                    <div class="why-icon"><i data-lucide="dollar-sign"></i></div>
                     <h3 class="why-title">Save Costs</h3>
-                    <p class="why-description">
-                        Modern ICT tools integrated into our workflow guarantee overall cost savings while maintaining service excellence
-                    </p>
+                    <p class="why-description">Modern ICT tools integrated into our workflow guarantee overall cost savings while maintaining service excellence</p>
                 </div>
-
-                <div class="why-card">
-                    <div class="why-icon">
-                        <i data-lucide="award"></i>
-                    </div>
+                <div class="why-card hover-glow">
+                    <div class="why-icon"><i data-lucide="award"></i></div>
                     <h3 class="why-title">Commitment to Quality</h3>
-                    <p class="why-description">
-                        Dedicated quality assurance team monitors all project phases, ensuring defect prevention and risk mitigation
-                    </p>
+                    <p class="why-description">Dedicated quality assurance team monitors all project phases, ensuring defect prevention and risk mitigation</p>
                 </div>
-
-                <div class="why-card">
-                    <div class="why-icon">
-                        <i data-lucide="users"></i>
-                    </div>
+                <div class="why-card hover-glow">
+                    <div class="why-icon"><i data-lucide="users"></i></div>
                     <h3 class="why-title">Personnel Quality</h3>
-                    <p class="why-description">
-                        Experienced consultants and highly qualified associates providing unique, practical, and comprehensive solutions
-                    </p>
+                    <p class="why-description">Experienced consultants and highly qualified associates providing unique, practical, and comprehensive solutions</p>
                 </div>
-
-                <div class="why-card">
-                    <div class="why-icon">
-                        <i data-lucide="cpu"></i>
-                    </div>
+                <div class="why-card hover-glow">
+                    <div class="why-icon"><i data-lucide="cpu"></i></div>
                     <h3 class="why-title">Technology Competence</h3>
-                    <p class="why-description">
-                        Expertise in various technologies delivering integrated, scalable solutions with optimal cost performance
-                    </p>
+                    <p class="why-description">Expertise in various technologies delivering integrated, scalable solutions with optimal cost performance</p>
                 </div>
-
-                <div class="why-card">
-                    <div class="why-icon">
-                        <i data-lucide="headphones"></i>
-                    </div>
+                <div class="why-card hover-glow">
+                    <div class="why-icon"><i data-lucide="headphones"></i></div>
                     <h3 class="why-title">Dedicated Service</h3>
-                    <p class="why-description">
-                        Communication channels for real-time updates and advice beyond scheduled progress reporting
-                    </p>
+                    <p class="why-description">Communication channels for real-time updates and advice beyond scheduled progress reporting</p>
                 </div>
-
-                <div class="why-card">
-                    <div class="why-icon">
-                        <i data-lucide="settings"></i>
-                    </div>
+                <div class="why-card hover-glow">
+                    <div class="why-icon"><i data-lucide="settings"></i></div>
                     <h3 class="why-title">Client Tailored Solutions</h3>
-                    <p class="why-description">
-                        Each assignment customized to meet individual needs, circumstances, timetable, and budget
-                    </p>
+                    <p class="why-description">Each assignment customized to meet individual needs, circumstances, timetable, and budget</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Clients Section -->
+    <!-- Clients Section - Now with Logos -->
     <section id="clients" class="section">
         <div class="container">
             <div class="section-header">
@@ -286,19 +227,58 @@
             </div>
 
             <div class="clients-grid">
-                <div class="client-card">Food and Agriculture Organization (FAO)</div>
-                <div class="client-card">Government of Kenya</div>
-                <div class="client-card">County Governments - Kenya</div>
-                <div class="client-card">American Friends Service Committee (AFSC)</div>
-                <div class="client-card">German GIZ</div>
-                <div class="client-card">Cooperative League of USA (CLUSA)</div>
-                <div class="client-card">Aga Khan Development Network (AKDN)</div>
-                <div class="client-card">Voluntary Services Overseas (VSO)</div>
-                <div class="client-card">Kenya Market Trust</div>
-                <div class="client-card">Westminster Foundation for Democracy (WFD)</div>
-                <div class="client-card">East African Civil Society Organization Forum (EACSOF)</div>
-                <div class="client-card">Aga Khan University Hospital</div>
-                <div class="client-card">East African Legislative Assembly (EALA)</div>
+                <div class="client-card hover-glow">
+                    <img src="https://www.fao.org/fileadmin/templates/fao/images/fao_logo.png" alt="FAO" class="client-logo">
+                    <span class="client-name">Food and Agriculture Organization (FAO)</span>
+                </div>
+                <div class="client-card hover-glow">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/1c/Coat_of_arms_of_Kenya.svg" alt="Government of Kenya" class="client-logo">
+                    <span class="client-name">Government of Kenya</span>
+                </div>
+                <div class="client-card hover-glow">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Coat_of_arms_of_Kenya_%28county%29.svg" alt="County Governments Kenya" class="client-logo">
+                    <span class="client-name">County Governments - Kenya</span>
+                </div>
+                <div class="client-card hover-glow">
+                    <img src="https://www.afsc.org/sites/default/files/styles/large/public/2023-06/AFSC-logo.png" alt="AFSC" class="client-logo">
+                    <span class="client-name">American Friends Service Committee (AFSC)</span>
+                </div>
+                <div class="client-card hover-glow">
+                    <img src="https://www.giz.de/static/en/images/logo_giz.png" alt="GIZ" class="client-logo">
+                    <span class="client-name">German GIZ</span>
+                </div>
+                <div class="client-card hover-glow">
+                    <img src="https://www.ncba.coop/images/logo.png" alt="CLUSA" class="client-logo">
+                    <span class="client-name">Cooperative League of USA (CLUSA)</span>
+                </div>
+                <div class="client-card hover-glow">
+                    <img src="https://www.akdn.org/sites/akdn/files/media/logos/akdn-logo.png" alt="AKDN" class="client-logo">
+                    <span class="client-name">Aga Khan Development Network (AKDN)</span>
+                </div>
+                <div class="client-card hover-glow">
+                    <img src="https://www.vsointernational.org/sites/default/files/vso-logo.png" alt="VSO" class="client-logo">
+                    <span class="client-name">Voluntary Services Overseas (VSO)</span>
+                </div>
+                <div class="client-card hover-glow">
+                    <img src="https://kenyamarkettrust.org/wp-content/uploads/2020/06/KMT-Logo.png" alt="Kenya Market Trust" class="client-logo">
+                    <span class="client-name">Kenya Market Trust</span>
+                </div>
+                <div class="client-card hover-glow">
+                    <img src="https://wfd.org/sites/default/files/2023-02/WFD-logo.png" alt="WFD" class="client-logo">
+                    <span class="client-name">Westminster Foundation for Democracy (WFD)</span>
+                </div>
+                <div class="client-card hover-glow">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/EACSOF_Logo.png" alt="EACSOF" class="client-logo">
+                    <span class="client-name">East African Civil Society Organization Forum (EACSOF)</span>
+                </div>
+                <div class="client-card hover-glow">
+                    <img src="https://www.aku.edu/_layouts/15/AKU/images/aku-logo.png" alt="Aga Khan University Hospital" class="client-logo">
+                    <span class="client-name">Aga Khan University Hospital</span>
+                </div>
+                <div class="client-card hover-glow">
+                    <img src="https://eala.org/wp-content/uploads/2020/06/eala-logo.png" alt="EALA" class="client-logo">
+                    <span class="client-name">East African Legislative Assembly (EALA)</span>
+                </div>
             </div>
 
             <div class="clients-footer">
@@ -309,8 +289,10 @@
         </div>
     </section>
 
+    <!-- Contact & Footer remain unchanged -->
     <!-- Contact Section -->
     <section id="contact" class="section">
+        <!-- ... (your existing contact section - unchanged) ... -->
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Begin Your Journey</h2>
@@ -323,32 +305,23 @@
                 <div class="contact-info">
                     <div class="office-section">
                         <h3 class="office-title">Kenya Head Office</h3>
-                        
                         <div class="contact-item">
-                            <div class="contact-icon">
-                                <i data-lucide="map-pin"></i>
-                            </div>
+                            <div class="contact-icon"><i data-lucide="map-pin"></i></div>
                             <div class="contact-text">
                                 Cassia Court, Block D4, 2nd Floor<br>
                                 Kiambere Road, Upper Hill<br>
                                 P.O. Box 2429-00621, Nairobi
                             </div>
                         </div>
-
                         <div class="contact-item">
-                            <div class="contact-icon">
-                                <i data-lucide="phone"></i>
-                            </div>
+                            <div class="contact-icon"><i data-lucide="phone"></i></div>
                             <div class="contact-text">
                                 +254 717 281 394<br>
                                 +254 714 761 283
                             </div>
                         </div>
-
                         <div class="contact-item">
-                            <div class="contact-icon">
-                                <i data-lucide="mail"></i>
-                            </div>
+                            <div class="contact-icon"><i data-lucide="mail"></i></div>
                             <div class="contact-text">
                                 info@smectconsult.co.ke<br>
                                 coranga@gmail.com
@@ -380,12 +353,11 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">SMECT</div>
-                <div class="footer-copy">© 2024 Smect Consultants. All rights reserved.</div>
+                <div class="footer-copy">© 2025 Smect Consultants. All rights reserved.</div>
                 <div class="footer-links">
                     <a href="#" class="footer-link">Privacy</a>
                     <a href="#" class="footer-link">Terms</a>
@@ -396,5 +368,6 @@
     </footer>
 
     <script src="script.js"></script>
+    
 </body>
 </html>
