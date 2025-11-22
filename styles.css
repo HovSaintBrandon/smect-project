@@ -193,6 +193,53 @@ a {
     overflow: hidden;
     padding-top: 5rem;
 }
+* Hero Section */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding-top: 5rem;
+}
+
+/* Hero Carousel */
+.hero-carousel {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.carousel-slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.carousel-slide:nth-child(1) {
+    background-image: linear-gradient(to bottom, hsla(220, 15%, 8%, 0.7), hsla(220, 15%, 8%, 0.85)), 
+                      url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=80');
+}
+
+.carousel-slide:nth-child(2) {
+    background-image: linear-gradient(to bottom, hsla(220, 15%, 8%, 0.7), hsla(220, 15%, 8%, 0.85)), 
+                      url('smect1.jpeg');
+}
+
+.carousel-slide:nth-child(3) {
+    background-image: linear-gradient(to bottom, hsla(220, 15%, 8%, 0.7), hsla(220, 15%, 8%, 0.85)), 
+                      url('smect2.jpeg');
+}
+
+.carousel-slide.active {
+    opacity: 1;
+}
+
 
 .hero-bg {
     position: absolute;
