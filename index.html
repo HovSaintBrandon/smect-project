@@ -220,6 +220,66 @@
             </div>
         </div>
     </section>
+   <!-- Management Team Section -->
+    <section id="team" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Leadership Team</h2>
+                <div class="section-divider"></div>
+                <p class="section-description">Meet the experienced professionals driving our vision forward</p>
+            </div>
+
+            <div class="team-grid">
+                <!-- CEO Card -->
+                <div class="team-card" data-manager="ceo">
+                    <div class="team-image-wrapper">
+                        <img src="Coranga.png" alt="Chief Executive Officer" class="team-image">
+                        <div class="team-overlay">
+                            <h3 class="team-name">Charles Oranga</h3>
+                            <p class="team-position">Chief Executive Officer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Uganda Manager Card -->
+                <div class="team-card" data-manager="uganda">
+                    <div class="team-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80" alt="Manager Head Office Uganda" class="team-image">
+                        <div class="team-overlay">
+                            <h3 class="team-name">Elvis Obbo</h3>
+                            <p class="team-position">Manager Head Office Uganda</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- General Manager Card -->
+                <div class="team-card" data-manager="general">
+                    <div class="team-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80" alt="General Manager" class="team-image">
+                        <div class="team-overlay">
+                            <h3 class="team-name">General Manager</h3>
+                            <p class="team-position">General Manager</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Modal -->
+    <div id="teamModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeTeamModal()">&times;</button>
+            <div class="modal-body">
+                <img id="modalImage" src="" alt="" class="modal-image">
+                <div class="modal-text">
+                    <h3 id="modalName" class="modal-name"></h3>
+                    <p id="modalPosition" class="modal-position"></p>
+                    <div id="modalDescription" class="modal-description"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Clients Section - Now with Logos -->
     <section id="clients" class="section">

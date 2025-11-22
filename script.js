@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
             contactForm.reset();
         });
     }
-    
+
     // Add scroll animation effect
     const observerOptions = {
         threshold: 0.1,
@@ -114,15 +114,126 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Global function for button onclick
+// ——— TEAM DATA (global) ———
+const teamData = {
+    ceo: {
+        name: 'Charles Oranga',
+        position: 'Chief Executive Officer',
+        image: 'Coranga.png',
+        description: `
+            <h4>Professional Experience</h4>
+            <ul>
+                <li>Over 20 years of experience in business development and consultancy</li>
+                <li>Extensive expertise in programme design and project management</li>
+                <li>Proven track record in organizational capacity building</li>
+                <li>Led numerous successful projects across East Africa</li>
+            </ul>
+            <h4>Key Skills</h4>
+            <ul>
+                <li>Strategic Planning & Business Development</li>
+                <li>Project Management & Leadership</li>
+                <li>Stakeholder Engagement & Communication</li>
+                <li>Organizational Development & Change Management</li>
+            </ul>
+        `
+    },
+    uganda: {
+        name: 'Elvis Obbo',
+        position: 'Manager Head Office Uganda',
+        image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80',
+        description: `<h4>Professional Experience</h4>
+            <ul>
+                <li>15+ years managing regional operations across East Africa</li>
+                <li>Specialized in cross-border project coordination</li>
+                <li>Expert in stakeholder management and client relations</li>
+                <li>Successfully delivered multiple capacity building initiatives</li>
+            </ul>
+            <h4>Key Skills</h4>
+            <ul>
+                <li>Regional Operations Management</li>
+                <li>Client Relationship Management</li>
+                <li>Team Leadership & Development</li>
+                <li>Programme Implementation & Monitoring</li>
+            </ul>`
+    },
+    general: {
+        name: 'General Manager',
+        position: 'General Manager',
+        image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80',
+        description: `<h4>Professional Experience</h4>
+            <ul>
+                <li>Extensive experience in organizational management and operations</li>
+                <li>Proven expertise in quality assurance and service delivery</li>
+                <li>Strong background in research and monitoring & evaluation</li>
+                <li>Led implementation of innovative business solutions</li>
+            </ul>
+            <h4>Key Skills</h4>
+            <ul>
+                <li>Operational Excellence & Process Optimization</li>
+                <li>Quality Management & Assurance</li>
+                <li>Research & Evaluation Methodologies</li>
+                <li>Strategic Planning & Implementation</li>
+            </ul>`
+    }
+};
+
+// ——— ALL DOM-READY CODE ———
+document.addEventListener('DOMContentLoaded', function () {
+    lucide.createIcons();
+
+    // ... all your existing code (carousel, mobile menu, smooth scroll, form, etc.) ...
+
+    // Team modal functions
+    function openTeamModal(managerId) {
+        const data = teamData[managerId];
+        if (!data) return;
+
+        document.getElementById('modalName').textContent = data.name;
+        document.getElementById('modalPosition').textContent = data.position;
+        document.getElementById('modalImage').src = data.image;
+        document.getElementById('modalImage').alt = data.position;
+        document.getElementById('modalDescription').innerHTML = data.description;
+
+        document.getElementById('teamModal').classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    window.closeTeamModal = function() {
+    document.getElementById('teamModal').classList.remove('active');
+    document.body.style.overflow = '';
+};
+
+    // Close on backdrop click
+    document.getElementById('teamModal').addEventListener('click', e => {
+        if (e.target === e.currentTarget) closeTeamModal();
+    });
+
+    // Close with Escape
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape') closeTeamModal();
+    });
+
+    // ——— THIS IS THE IMPORTANT PART ———
+    document.querySelectorAll('.team-card').forEach(card => {
+        card.addEventListener('click', function () {
+            const managerId = this.dataset.manager;   // "ceo", "uganda", "general"
+            if (managerId && teamData[managerId]) {
+                openTeamModal(managerId);
+            }
+        });
+    });
+
+    // ... rest of your code (observer, scroll spy, etc.) ...
+
+}); // ← only ONE closing here
+
+// Global scroll helper (still fine outside)
 function scrollToSection(sectionId) {
-    const element = document.getElementById(sectionId);
-    if (element) {
-        const navHeight = document.querySelector('.navigation').offsetHeight;
-        const targetPosition = element.offsetTop - navHeight - 20;
-        
+    const el = document.getElementById(sectionId);
+    if (el) {
+        const navHeight = document.querySelector('.navigation')?.offsetHeight || 0;
         window.scrollTo({
-            top: targetPosition,
+            top: el.offsetTop - navHeight - 20,
             behavior: 'smooth'
         });
     }
